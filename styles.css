@@ -1,0 +1,238 @@
+/* Estilos generales */
+.amatic-sc-regular {
+  font-family: "Amatic SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.amatic-sc-bold {
+  font-family: "Amatic SC", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Aplicar color violeta a todo el texto */
+* {
+  color: rgb(255, 255, 255);
+}
+
+/* Restablecer el color para los elementos del header */
+.nav-menu,
+.nav-menu * {
+  color: white !important; /* Asegura que los elementos del header mantengan el color blanco */
+}
+
+h1 {
+  font-size: 90px;
+  font-family: 'Dancing Script', cursive;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+body {
+  background-image: url('img/fondo.jpg'); /* Ruta de la imagen */
+  background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-attachment: fixed; /* Fija la imagen para que no se desplace con el scroll */
+}
+
+/* Cabecera fija */
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed; /* Fija el header en la parte superior */
+  top: 0; /* Lo coloca en la parte superior */
+  left: 0; /* Lo coloca en el lado izquierdo */
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  z-index: 1000; /* Asegura que esté por encima del contenido */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para mejor visibilidad */
+}
+
+.nav-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-link.gradient {
+  background: linear-gradient(45deg, #110a0c, #bf78cc);
+  border-radius: 25px;
+}
+
+.nav-link.gradient:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(233, 30, 99, 0.2);
+}
+
+/* Ajuste para que el contenido no quede oculto detrás del header */
+#home {
+  padding-top: 100px; /* Ajusta este valor según la altura de tu header */
+}
+
+/* Sección de bienvenida */
+.welcome {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: rgba(51, 51, 51, 0.7);
+  color: white;
+}
+
+/* Estilos para los carruseles */
+#carousels {
+  padding: 20px;
+  text-align: center;
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.carousel-wrapper {
+  flex: 1 1 30%;
+  max-width: 30%;
+  text-align: center;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px; /* Bordes redondeados para las imágenes */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+  z-index: 10;
+}
+
+.carousel-control-prev {
+  left: 10px;
+}
+
+.carousel-control-next {
+  right: 10px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Sección "about" */
+.about {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+  color: white; /* Texto blanco para mejor contraste */
+  margin: 20px 0; /* Espaciado superior e inferior */
+}
+
+/* Sección de contacto */
+.contact {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+  color: white; /* Texto blanco para mejor contraste */
+  margin: 20px 0; /* Espaciado superior e inferior */
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icon {
+  color: white; /* Texto blanco para los iconos */
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+.social-icon:hover {
+  color: #9c27b0; /* Cambia el color al pasar el mouse */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 40px; /* Tamaño de fuente más pequeño para móviles */
+  }
+
+  .carousel-container {
+    flex-direction: column; /* Apila los carruseles verticalmente */
+    gap: 40px; /* Aumenta el espacio entre carruseles */
+  }
+
+  .carousel-wrapper {
+    max-width: 100%; /* Ocupa el ancho completo en móviles */
+  }
+
+  .nav-group {
+    flex-direction: column; /* Apila los enlaces de navegación */
+    gap: 10px;
+  }
+
+  .nav-link {
+    padding: 10px; /* Aumenta el padding para facilitar el toque */
+  }
+
+  .social-links {
+    flex-direction: column; /* Apila los iconos de redes sociales */
+    gap: 10px;
+  }
+}
