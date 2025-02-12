@@ -54,4 +54,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const category = carousel.classList[1]; // Obtiene la categoría del carrusel
         showSlide(category, 0); // Muestra la primera imagen al cargar la página
     });
+
+    // Manejar el menú hamburguesa
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navGroup = document.getElementById('nav-group');
+
+    mobileMenu.addEventListener('click', () => {
+        navGroup.classList.toggle('active');
+    });
 });
