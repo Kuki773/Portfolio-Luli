@@ -81,7 +81,7 @@ body {
 
 /* Ajuste para que el contenido no quede oculto detrás del header */
 #home {
-  padding-top: 100px; /* Ajusta este valor según la altura de tu header */
+  padding-top: 150px; /* Aumenta este valor para móviles */
 }
 
 /* Sección de bienvenida */
@@ -234,5 +234,9 @@ footer {
   .social-links {
     flex-direction: column; /* Apila los iconos de redes sociales */
     gap: 10px;
+  }
+
+  #home {
+    padding-top: 200px; /* Aumenta el padding-top para móviles */
   }
 }
