@@ -42,22 +42,22 @@
                 <div class="carousel retratos">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="img/Retratos/Anto1.jpg" alt="Retrato 1">
+                            <img src="img/Retratos/Anto1.jpg" alt="Retrato 1" onclick="toggleImage(this)">
                         </div>
                         <div class="carousel-item">
-                            <img src="img/Retratos/Anto2.jpg" alt="Retrato 2">
+                            <img src="img/Retratos/Anto2.jpg" alt="Retrato 2" onclick="toggleImage(this)">
                         </div>
                         <div class="carousel-item">
-                            <img src="img/Retratos/Ves1.jpg" alt="Retrato 3">
+                            <img src="img/Retratos/Ves1.jpg" alt="Retrato 3" onclick="toggleImage(this)">
                         </div>
                         <div class="carousel-item">
-                            <img src="img/Retratos/Ves2.jpg" alt="Retrato 4">
+                            <img src="img/Retratos/Ves2.jpg" alt="Retrato 4" onclick="toggleImage(this)">
                         </div>
                         <div class="carousel-item">
-                            <img src="img/Retratos/ropa1.jpg" alt="Retrato 5">
+                            <img src="img/Retratos/ropa1.jpg" alt="Retrato 5" onclick="toggleImage(this)">
                         </div>
                         <div class="carousel-item">
-                            <img src="img/Retratos/ropa2.jpg" alt="Retrato 6">
+                            <img src="img/Retratos/ropa2.jpg" alt="Retrato 6" onclick="toggleImage(this)">
                         </div>
                     </div>
                     <button class="carousel-control-prev" onclick="prevSlide('retratos')">&#10094;</button>
@@ -71,16 +71,16 @@
                 <div class="carousel paisajes">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="img/musicale/_DSC0333.jpg" alt="Show 1">
+                            <img src="img/musicale/_DSC0333.jpg" alt="Show 1" onclick="toggleImage(this)">
                         </div>
                         <div class="carousel-item">
-                            <img src="img/musicale/DSC_0377.jpg" alt="Show 2">
+                            <img src="img/musicale/DSC_0377.jpg" alt="Show 2" onclick="toggleImage(this)">
                         </div>
                         <div class="carousel-item">
-                            <img src="img/musicale/DSC_0378.jpg" alt="Show 3">
+                            <img src="img/musicale/DSC_0378.jpg" alt="Show 3" onclick="toggleImage(this)">
                         </div>
                         <div class="carousel-item">
-                            <img src="img/musicale/DSC_0392.jpg" alt="Show 4">
+                            <img src="img/musicale/DSC_0392.jpg" alt="Show 4" onclick="toggleImage(this)">
                         </div>
                     </div>
                     <button class="carousel-control-prev" onclick="prevSlide('paisajes')">&#10094;</button>
@@ -94,13 +94,13 @@
                 <div class="carousel murales">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="img/autoral/DSC_0422.jpg" alt="Autoral 1">
+                            <img src="img/autoral/DSC_0422.jpg" alt="Autoral 1" onclick="toggleImage(this)">
                         </div>
                         <div class="carousel-item">
-                            <img src="img/autoral/DSC_0432.jpg" alt="Autoral 2">
+                            <img src="img/autoral/DSC_0432.jpg" alt="Autoral 2" onclick="toggleImage(this)">
                         </div>
                         <div class="carousel-item">
-                            <img src="img/autoral/DSC_0488.jpg" alt="Autoral 3">
+                            <img src="img/autoral/DSC_0488.jpg" alt="Autoral 3" onclick="toggleImage(this)">
                         </div>
                     </div>
                     <button class="carousel-control-prev" onclick="prevSlide('murales')">&#10094;</button>
@@ -146,6 +146,12 @@
         <p>&copy; 2025 Todas las imágenes poseen derechos de autor</p>
         <p>Diseñado por Kuki</p>
     </footer>
+
+    <!-- Modal para la imagen ampliada -->
+    <div id="imageModal" class="image-modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" class="image-modal-content">
+    </div>
 
     <!-- Script para el slider -->
     <script src="script.js"></script>
